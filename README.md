@@ -13,5 +13,6 @@ React timer and countdown
 - test if the function is called or not ([spy](https://github.com/mjackson/expect#spy-tohavebeencalled))
 
 #### Reference
-- in this line []() the cuurying pattern has been used, [currying pattern](https://www.sitepoint.com/currying-in-functional-javascript/)
+- in this line [L10](https://github.com/heron2014/react-timer/blob/master/src/components/Controls.jsx#L10) the cuurying pattern has been used, [currying pattern](https://www.sitepoint.com/currying-in-functional-javascript/)
 - another explanation currying with bind method [here](http://anasfirdousi.com/introduction-to-functional-javascript-apply-call-bind-higher-order-functions.html)
+- add if..statement in jsx [article](http://devnacho.com/2016/02/15/different-ways-to-add-if-else-statements-in-JSX/)
