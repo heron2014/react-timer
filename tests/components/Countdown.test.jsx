@@ -28,7 +28,7 @@ describe('Countdown', () => {
       }, 1001);
     });
 
-    it('should never set state to less than 0 when countdown reaches to 0', () => {
+    it('should never set state to less than 0 when countdown reaches to 0', (done) => {
       let countdown = TestUtils.renderIntoDocument(<Countdown />);
       // start countdown from 1 second
       countdown.handleSetCountdown(1);
@@ -36,6 +36,7 @@ describe('Countdown', () => {
       //check if the countdown is 0 after 3 seconds passed after starting countdown from 1 second
       setTimeout(() => {
         expect(countdown.state.seconds).toBe(0);
+        done();
       }, 3001);
     });
   });
