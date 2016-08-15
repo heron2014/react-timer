@@ -11,9 +11,6 @@ var Controls = React.createClass({
       this.props.onStatusChange(newStatus);
     }
   },
-  componentWillReceiveProps: function (newProps) {
-    console.log('componentWillReceiveProps ', newProps.countdownStatus);
-  },
   render: function () {
     let {countdownStatus} = this.props;
     // https://facebook.github.io/react/tips/if-else-in-JSX.html

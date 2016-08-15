@@ -39,5 +39,31 @@ describe('Countdown', () => {
         done();
       }, 3001);
     });
+
+    it('should pause countdown on pause status', (done) => {
+      var countdown = TestUtils.renderIntoDocument(<Countdown />);
+      countdown.handleSetCountdown(3);
+      countdown.handleStatusChange('paused');
+
+      // simulate 3 seconds and check if after 3 seconds you still have timer on 3 and status as 'paused'
+      setTimeout(() => {
+        expect(countdown.state.seconds).toBe(3);
+        expect(countdown.state.countdownStatus).toBe('paused');
+        done();
+      },1001)
+    });
+
+    it('should clear countdown on stopped status', (done) => {
+      var countdown = TestUtils.renderIntoDocument(<Countdown />);
+      countdown.handleSetCountdown(3);
+      countdown.handleStatusChange('stopped');
+
+      // simulate 3 seconds and check if after 3 seconds you still have timer on 0 and status as 'stopped'
+      setTimeout(() => {
+        expect(countdown.state.seconds).toBe(0);
+        expect(countdown.state.countdownStatus).toBe('stopped');
+        done();
+      },1001)
+    });
   });
 });
