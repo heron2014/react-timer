@@ -1,6 +1,14 @@
 React timer and countdown
 
+Live link : https://react-timer-example.herokuapp.com/
 
+### Run this example:
+
+- clone the repo
+- ```npm install```
+- ```npm run build``` - run webpack to build the bundle.js
+- ```npm start``` go to http://localhost:3000
+- ```npm test``` - to run tests
 
 
 
